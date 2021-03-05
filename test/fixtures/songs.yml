@@ -2,8 +2,8 @@
 
 one:
   title: MyString
-  Artist: one
+  artist: one
 
 two:
   title: MyString
-  Artist: two
+  artist: two

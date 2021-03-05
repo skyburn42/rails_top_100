@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  Billboard: one
+  billboard: one
 
 two:
   name: MyString
-  Billboard: two
+  billboard: two
