@@ -16,6 +16,17 @@ const BillboardNew = ({ billboard }) => {
         </select>
         <button type="submit">Add</button>
       </form>
+
+      <h1>Create your own Billboard</h1>
+      <form action="/billboards" method="post">
+        <input 
+          placeholder="Title"
+          type="text"
+          defaultValue={defaultTitle}
+          name="billboard[title]"
+        />
+        <button type="submit">Add</button>
+      </form>
     </>
   )
 }

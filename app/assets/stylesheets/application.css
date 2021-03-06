@@ -36,9 +36,15 @@ button:hover {
 
 h1 {
   color: rgb(6, 100, 163);
+  font-size: 3em;
 }
 a {
   color: rgb(221, 224, 221);
+  font-size: 1.1em;
+}
+
+a:first-child {
+  font-size: 2em;
 }
 
 a:visited {
