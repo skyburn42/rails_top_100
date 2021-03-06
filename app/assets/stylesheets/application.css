@@ -43,8 +43,8 @@ a {
   font-size: 1.1em;
 }
 
-a:first-child {
-  font-size: 2em;
+a {
+  font-size: 1em;
 }
 
 a:visited {
