@@ -8,9 +8,21 @@ class ArtistsController < ApplicationController
   end
 
   def show
+    render component: 'Artist', props: { billboard: @billboard, artist: @artist}
   end
 
   def new
+    @artist = @billboard.artists.new
+    render component: 'ArtistNew', props: { billboard: @billboard, artist: @artist }
+  end
+
+  def create
+    @artist = @billboard.artists.new(artist_params)
+    if @artist.save
+      redirect_to billboard_artists_path(@billboard)
+    else
+      render component: 'ArtistNew', props: { billboard: @billboard, artist: @artist}
+    end
   end
 
   def edit
