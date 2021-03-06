@@ -1,17 +1,17 @@
 class BillboardsController < ApplicationController
   def index
     @billboards = Billboard.all
-    render component: 'billboards', props: { billboards: @billboards }
+    render component: 'Billboards', props: { billboards: @billboards }
   end
 
   def show
-    @billboard = Billboards.find(params[:id])
-    render component: 'billboard', props: { billboard: @billboard }
+    @billboard = Billboard.find(params[:id])
+    render component: 'Billboard', props: { billboard: @billboard }
   end
 
   def new
     @billboard = Billboard.new
-    render component: 'billboardNew', props: { billboard: @billboard }
+    render component: 'BillboardNew', props: { billboard: @billboard }
   end
 
   def create
@@ -19,13 +19,13 @@ class BillboardsController < ApplicationController
       if @billboard.save
         redirect_to billboards_path
       else
-        render component: 'billboardNew', props: {billboard: @billboard }
+        render component: 'BillboardNew', props: {billboard: @billboard }
       end
   end
 
   def edit
     @billboard = Billboard.find(params[:id])
-      render component: 'billboardEdit', props: { billboard: @billboard }
+      render component: 'BillboardEdit', props: { billboard: @billboard }
   end
 
   def update
@@ -33,7 +33,7 @@ class BillboardsController < ApplicationController
     if @billboard.update(billboard_params)
       redirect_to billboards_path
     else
-      render component: 'billboardEdit', props: { billboard: @billboard }
+      render component: 'BillboardEdit', props: { billboard: @billboard }
     end
   end
 
