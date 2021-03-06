@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: rgb(29, 28, 27);
+}
+select {
+  background-color: greenyellow;
+  font-size: 1.3em;
+  
+}
+
+button {
+  font-size: 1.2em;
+  
+  border-radius: 5px;
+  background-color: grey;
+}
+
+button:hover {
+  background-color: rgb(42, 243, 16);
+  cursor: pointer;
+}
+
+h1 {
+  color: rgb(6, 100, 163);
+}
+a {
+  color: rgb(221, 224, 221);
+}
+
+a:visited {
+  color: rgb(182, 96, 110);
+  
+}
