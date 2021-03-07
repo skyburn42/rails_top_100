@@ -26,6 +26,20 @@ class ArtistsController < ApplicationController
   end
 
   def edit
+    render component: 'ArtistEdit', props: { billboard: @billboard, artist: @artist }
+  end
+
+  def update
+    if @artist.update(artist_params)
+      redirect_to billboard_artists_path
+    else
+      render component: 'ArtistEdit', props: {billboard: @billboard, artist: @artist }
+    end
+  end
+
+  def destroy
+    @artist.destroy
+    redirect_to billboard_artists_path(@billboard)
   end
 
   private
