@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_billboard
+  # before_action :set_billboard
   before_action :set_artist
   before_action :set_song, only: [ :show, :edit, :update, :destroy ]
   def index
@@ -19,7 +19,7 @@ class SongsController < ApplicationController
   def create
     @song = @artist.songs.new(song_params)
     if @song.save
-      # redirect_to songs_path(@artist)
+      redirect_to artist_songs_path(@artist)
     else
       render component: 'SongNew', props: { artist: @artist, song: @song}
     end
@@ -31,15 +31,15 @@ class SongsController < ApplicationController
 
   def update
     if @song.update(song_params)
-      redirect_to songs_path
+      redirect_to artist_songs_path
     else
       render component: 'SongEdit', props: { artist: @artist, song: @song }
     end
   end
 
   def destroy
-    @songs.destroy
-    redirect_to artists_songs_path(@artist)
+    @song.destroy
+    redirect_to artist_songs_path #----------notworking###
   end
 
 
@@ -48,9 +48,9 @@ class SongsController < ApplicationController
     def song_params
       params.require(:song).permit(:title)
     end
-    def set_billboard
-      @billboard = Billboard.find(params[:billboard_id])
-    end
+    # def set_billboard
+    #   @billboard = Billboard.find(params[:billboard_id])
+    # end
 
     def set_artist
       @artist = Artist.find(params[:artist_id])
