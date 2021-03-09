@@ -8,9 +8,9 @@ const Artist = ({ billboard, artist }) => {
       <p>
         created: {artist.created_at}, id: {artist.id}
       </p>
-      <a href={`/billboards/${id}/artists/`}>back to Artists from {title}</a>
+      <a href={`/artists/`}>back to Artists from {title}</a>
       <br/>
-      <a href={`/billboards/${id}/artists/${artist.id}/songs`}>Songs</a>
+      <a href={`/artists/${artist.id}/songs`}>Songs</a>
     </>
   )
 }
