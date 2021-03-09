@@ -2,6 +2,7 @@ class SongsController < ApplicationController
   # before_action :set_billboard
   before_action :set_artist
   before_action :set_song, only: [ :show, :edit, :update, :destroy ]
+
   def index
     @songs = @artist.songs
     render component: 'Songs', props: { artist: @artist, songs: @songs}
@@ -39,10 +40,8 @@ class SongsController < ApplicationController
 
   def destroy
     @song.destroy
-    redirect_to artist_songs_path #----------notworking###
+    redirect_to artist_songs_path
   end
-
-
 
   private
     def song_params
