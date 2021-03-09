@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SongNew = ({ artist, song }) => {
- 
   const { title, errors } = song
   const defaultTitle = title ? title : ""
   return(
@@ -10,7 +9,7 @@ const SongNew = ({ artist, song }) => {
       { errors && errors }
       <form action={`/artists/${artist.id}/songs/`} method="post">
         <input
-          placeholder="title"
+          placeholder="Title"
           defaultValue={defaultTitle}
           type="text"
           name="song[title]"
