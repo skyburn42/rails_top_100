@@ -10,7 +10,7 @@ const Song = ({ artist, song }) => {
       </p>
       <a href={`/artists/${artist.id}/songs/`}>back to all songs {artist.name}</a>
       <br/>
-      <a href={`/artists/${artist.id}/songs/${song.id}`}>Songs</a>
+      
     </>
   )
 }
