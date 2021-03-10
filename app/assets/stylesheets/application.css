@@ -13,8 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ * {
+   margin 0;
+   padding: 0;
+ }
  body {
-  background-color: rgb(71, 70, 69);
+  background-color: black;
 }
 select {
   background-color: greenyellow;
@@ -59,14 +63,19 @@ a:visited {
 } 
 
 nav {
-  background-color: rgb(221, 224, 221);
+  background-color: rgb(75, 78, 75);
   padding: 1px 0px;
+  box-shadow: 1px 1px 10px white;
+  
   
 }
 ul {
   display: flex;
+  
   justify-content: space-around;
   list-style: none;
+  
+
 }
 
 li a {
@@ -83,4 +92,67 @@ li a:visited {
 
 li a:hover {
   text-decoration: underline;
+  text-shadow: 0px 0px 10px rgb(129, 219, 129);
 }
+/*-----------------billboard styles-----------------  */
+.cardList {
+display: grid;
+grid-template-columns: auto auto auto auto;
+justify-content: space-around;
+
+}
+
+
+.holy {
+  background-color: rgba(24,24,24,255);
+  display: grid;
+  margin: 10px;
+  grid-template-columns: auto ;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 20px 30px;
+}
+
+.holy:hover {
+  background-color: rgba(39,39,39,255)
+}
+
+.holyh {
+  color: rgba(255,255,255,255);
+  font-size: 1.5em;
+  
+  display: flex;
+  justify-content: center;
+}
+
+
+
+img {
+  justify-self: center;
+  width: 200px;
+  padding-bottom: 10px;
+}
+
+
+.holycard {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+a.links {
+  color: rgba(160,160,160,255);
+}
+
+a.links:hover {
+  color: skyblue;
+  text-shadow: 0px 0px 10px white;
+
+}
+/*----------End of billboard styles-------------*/
+
+/*--------- Artist Styles --------------*/
+
