@@ -1,4 +1,5 @@
 import React from 'react';
+import Artt from './assests/Artt.png';
 
 const Artists = ({ billboard, artists }) => {
   const { title, id } = billboard
@@ -14,7 +15,7 @@ const Artists = ({ billboard, artists }) => {
         <div className="holy">
           <div key={artist.id}>
             <h3 className="holyh">{artist.name}</h3>
-            <img className="imgTest" src="../../assets/images/tst.png"></img>
+            <img className="imgTest" src={Artt}></img>
 
             <div className="holycard">
               <a className="links" href={`/billboards/${id}/artists/${artist.id}`}>Show</a>
