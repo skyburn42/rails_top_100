@@ -1,5 +1,5 @@
 import React from 'react';
-
+import BillboardImg from './assets/tst.png';
 
 
 const url = "http://localhost:3000/billboards/";
@@ -14,7 +14,7 @@ const Billboards = ({ billboards }) => {
         <div className="holy">
             
             <h3 className="holyh">{billboard.title}</h3>
-            <img className="imgTest" src="../../assets/images/tst.png"></img>
+            <img className="imgTest" src={BillboardImg}/>
                
             <div className="holycard">
               <a className="links"href={url + billboard.id}>Show</a>
