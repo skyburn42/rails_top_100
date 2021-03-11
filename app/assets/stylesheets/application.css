@@ -41,6 +41,9 @@ button:hover {
 h1 {
   color: rgb(6, 100, 163);
   font-size: 3em;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 50px;
 }
 h2 {
   display: flex;
@@ -63,7 +66,7 @@ a:visited {
 
 nav {
   background-color: rgb(75, 78, 75);
-  padding: 5px 0px;
+  padding: 15px 0px;
   box-shadow: 1px 1px 10px white;
   
   
@@ -94,6 +97,10 @@ li a:hover {
   text-shadow: 0px 0px 10px rgb(129, 219, 129);
 }
 /*-----------------billboard styles-----------------  */
+.mybillboards {
+  justify-content: center;
+}
+
 .cardList {
 display: grid;
 grid-template-columns: auto auto auto auto;
@@ -101,7 +108,15 @@ justify-content: space-around;
 
 }
 
+p {
+  color: lightgray;
+  padding: 10px;
+}
 
+.mainlinks {
+  
+  margin-left: 30px;
+}
 .holy {
   background-color: rgba(24,24,24,255);
   display: grid;
@@ -122,6 +137,7 @@ justify-content: space-around;
   font-size: 1.5em;
   width: 200px;
   display: flex;
+  width: 200px;
   justify-content: center;
 }
 
@@ -141,6 +157,8 @@ img {
   width: auto;
   height: auto;
 }
+
+
 
 a.links {
   color: rgba(160,160,160,255);
