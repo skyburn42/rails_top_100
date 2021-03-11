@@ -8,7 +8,7 @@ const Song = ({ artist, song }) => {
       <p>
         created: {created_at}, id: {id}
       </p>
-      <a href={`/artists/${artist.id}/songs/`}>back to all songs {artist.name}</a>
+      <a className="mainlinks" href={`/artists/${artist.id}/songs/`}>back to all songs {artist.name}</a>
       <br/>
       
     </>

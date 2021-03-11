@@ -1,5 +1,5 @@
 import React from 'react';
-import Tst from './assests/tst.png';
+import Tst from './assets/tst.png';
 
 
 
@@ -9,7 +9,7 @@ const Billboards = ({ billboards }) => {
     <div className="mybillboards">
       
       <h1>Your Favorites</h1>
-      <a href={"/billboards/new"}>Create Your Billboard</a>
+      <a className="mainlinks" href={"/billboards/new"}>Create Your Billboard</a>
       <div className="cardList">
         { billboards.map( (billboard) => 
         <div className="holy">

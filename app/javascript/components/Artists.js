@@ -1,5 +1,5 @@
 import React from 'react';
-import Artt from './assests/Artt.png';
+import Artt from './assets/Artt.png';
 
 const Artists = ({ billboard, artists }) => {
   const { title, id } = billboard
@@ -7,9 +7,9 @@ const Artists = ({ billboard, artists }) => {
     <div className="myartists">
 
       <h1>Artists from {title} billboard</h1>
-      <a href={`/billboards/${id}/artists/new`}>New Artist</a>
+      <a className="mainlinks" href={`/billboards/${id}/artists/new`}>New Artist</a>
       <br />
-      <a href={`/billboards/${id}`}>Back to {title}</a>
+      <a className="mainlinks" href={`/billboards/${id}`}>Back to {title}</a>
       <div className="cardList">
       { artists.map( (artist) => 
         <div className="holy">
