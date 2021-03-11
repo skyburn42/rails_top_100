@@ -1,4 +1,5 @@
 import React from 'react';
+import SongImg from './assets/songs.jpeg';
 
 const styles = {
 
@@ -33,20 +34,21 @@ const Songs = ({ artist, songs }) => {
       <h1 style={styles.center}>Songs from {name}</h1>
       <p style={styles.center}><a href={`/artists/${artist.id}/songs/new`}>New Song</a></p>
       <p style={styles.center}><a href={`/billboards/${artist.billboard_id}/artists/${artist.id}`}>Back to {artist.name}</a></p>
-      <div style={styles.songs}>
+      <div className="cardList">
       { songs.map((song) => (
-        <div style={styles.song_contents} key={song.id}>
-          <h2 style={styles.center}>{song.title}</h2>
-          <ul>
-            <li><a href={`/artists/${artist.id}/songs/${song.id}`}>Play</a></li>
-            <li><a href={`/artists/${artist.id}/songs/${song.id}/edit`}>Edit</a></li>
-            <li><a 
-                href={`/artists/${artist.id}/songs/${song.id}`}
-                data-method="delete"
-              >
-                Delete
-              </a></li>
-          </ul>
+        <div className="holy" key={song.id}>
+          <h3 className="holyh">{song.title}</h3>
+          <img src={SongImg}/>
+          <div className="holycard">
+            <a className="links" href={`/artists/${artist.id}/songs/${song.id}`}>Play</a>
+            <a className="links" href={`/artists/${artist.id}/songs/${song.id}/edit`}>Edit</a>
+            <a className="links"
+              href={`/artists/${artist.id}/songs/${song.id}`}
+              data-method="delete"
+            >
+              Delete
+            </a>
+          </div>
         </div>
       ))}
       </div>
